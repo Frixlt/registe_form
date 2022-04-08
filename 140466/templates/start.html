@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>топовый текст</title>
-        <link rel="icon" href="files/site_icon.ico" type="image/x-icon"/>
-    </head>
-    
+    <title>топовый текст</title>
+    <link rel="icon" href="files/site_icon.ico" type="image/x-icon"/>
+</head>
     <body>
-        <h1>Привет, {{ username }}!</h1>
+        <h1>
+        {% if user %}
+            {{user_name}} <a href='/logout'> Выход </a>
+        {% else %}
+            <a href='/login'> Вход </a> или <a href='/register'> Регистрация </a>
+        {% endif %}
+        </h1>
         <table border="1px">
             <tr>
                 <th>логин</th>
@@ -20,6 +25,5 @@
             </tr>
             {% endfor %}
         </table>
-        <a href='/register'> добавить акаунт</a>
     </body>
 </html>
