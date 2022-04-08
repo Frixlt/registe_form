@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>топовый текст</title>
+    <link rel="icon" href="files/site_icon.ico" type="image/x-icon"/>
+</head>
+    <body>
+        <h1>
+        {% if user %}
+            {{user_name}} <a href='/logout'> Выход </a>
+        {% else %}
+            <a href='/login'> Вход </a> или <a href='/register'> Регистрация </a>
+        {% endif %}
+        </h1>
+        <table border="1px">
+            <tr>
+                <th>логин</th>
+                <th>пароль</th>
+            </tr>
+            <tr>
+                {% for i,j in table %}
+                    <td>{{i}}</td>
+                    <td>{{j}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
