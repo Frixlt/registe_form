@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Регистрация</title>
+</head>
+<body>
+    <h1>Форма для регистрации</h1>
+        <div>
+            <form method="post">
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required>
+                <br>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required minlength="8" maxlength="32" size="8">
+                <br>
+                <label for="password-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="password-repeat" required minlength="8" maxlength="32" size="8">
+                <hr>
+                <button type="submit" class="registerbtn">Регистрация</button>
+            </form>
+        </div>
+</body>
+</html>
